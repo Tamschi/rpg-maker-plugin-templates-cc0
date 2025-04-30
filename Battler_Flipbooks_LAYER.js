@@ -283,6 +283,14 @@
  * @option Skip (not recommended here)
  * @value Skip
  *
+ * @param framing_
+ * @text Framing
+ * @desc When set to 'Single', the entire image is used, even for battlers that are normally spritesheet-animated.
+ * @type select
+ * @default Single
+ * @option Single
+ * @option Unchanged
+ *
  *
  * @param forSvActorNote
  * @text for SV Actor (Note):
@@ -601,6 +609,9 @@ try {
     const core = window['TS_Battler_Flipbooks_Core'];
     if (!core) {
         throw new TS_Battler_Entrance_Flipbooks__Error("This plugin requires TS_Battler_Flipbooks_Core to be loaded earlier.");
+    }
+    if (core.version.featureLevel < 3) {
+        console.warn("Update TS_Battler_Flipbooks_Core.js to version 1.3 or later to use the 'Framing' parameter.");
     }
 
     // Class definitions:
