@@ -732,6 +732,8 @@ try {
         compatibilityTweaks: { configurable: false, writable: false, },
         spriteSizeTweak: { configurable: false, writable: false, },
         spriteSizeTweakUsePoseForPointer: { configurable: false, writable: false, },
+        spriteActorUpdateAppearTweak: { configurable: false, writable: false, },
+        spriteActorUpdateDisappearTweak: { configurable: false, writable: false, },
     });
 
     // An API isn't necessary, but recommended.
